@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>簡易點名系統</title>
+    <title>賽馬會「與耆同絡」長者平板電腦及線上支援計劃 點名系統</title>
     <meta name="theme-color" content="3B4252" />
     <style>
         h1 {
             /* 標題顏色 */
-            color: var(--nord7)
+            color: var(--nord0)
         }
 
         body {
             /* 背景顏色 */
-            background-color: var(--nord0)
+            background-color: var(#FFFFFF)
+            font-size: 6rem
         }
 
         body {
             /* 可選顏色 */
             --nord0: #2E3440;
-            --nord1: #3B4252;
-            --nord2: #434C5E;
+            --nord1: #8F27D7;
+            --nord2: #4FE405;
             --nord3: #4C566A;
             --nord4: #D8DEE9;
             --nord5: #E5E9F0;
@@ -52,8 +53,8 @@
 
         button,
         section>div {
-            background-color: var(--nord1);
-            box-shadow: rgba(0, 0, 0, .2) 0 0 .5rem
+            background-color: var(--nord6);
+            box-shadow: rgba(0, 0, 0, .2) 0 0 5rem
         }
 
         main,
@@ -71,7 +72,7 @@
         button,
         input,
         section>div {
-            box-shadow: rgba(0, 0, 0, .2) 0 0 .5rem
+            box-shadow: rgba(0, 0, 0, .2) 0 0 10rem
         }
 
         body,
@@ -79,6 +80,7 @@
         h2,
         html {
             text-align: center
+            font-size: 20rem
         }
 
         * {
@@ -86,7 +88,9 @@
             margin: 0;
             box-sizing: border-box;
             font-family: Arial, "微軟正黑體", Helvetica, sans-serif;
-            color: var(--nord6)
+            font-size: 20rem
+            color: var(--nord4)
+           
         }
 
         body,
@@ -96,9 +100,9 @@
 
         main {
             flex-direction: column;
-            height: 100vh;
-            height: 100dvh;
-            max-width: 500px;
+            height: 200vh;
+            height: 200dvh;
+            max-width: 100%;
             margin: 0 auto
         }
 
@@ -108,14 +112,16 @@
 
         button {
             display: block;
-            height: 50px;
-            width: calc(1/3*100% - 1rem);
+            height: 80px;
+            width: calc(1/4*100% - 5rem);
+            font-size: 6rem
             line-height: 50px;
-            border-radius: 1rem;
+            border-radius: 5rem;
             text-decoration: none;
             border: none;
             cursor: pointer;
-            transition: background-color .2s ease-in-out
+            transition: background-color .1s ease-in-out
+           
         }
 
         #call,
@@ -126,7 +132,7 @@
 
         .call button {
             width: calc(1/4*100% - 1rem);
-            margin: .5rem
+            margin: .2rem
         }
 
         button:hover {
@@ -150,12 +156,12 @@
         }
 
         section>div {
-            border-radius: 1rem;
+            border-radius: 3rem;
             overflow-x: hidden;
             overflow-y: auto;
             position: absolute;
             height: 100%;
-            transition: opacity .5s ease-in-out
+            transition: opacity .2s ease-in-out
         }
 
         #add,
@@ -176,8 +182,8 @@
 
         .search button,
         input {
-            height: 2rem;
-            width: 50%;
+            height: 8rem;
+            width: 80%;
             border-radius: .5rem;
             border: transparent;
             padding: 0 1rem;
@@ -215,24 +221,24 @@
 
         h2 {
             margin-top: 2rem;
-            font-weight: 600
+            font-weight: 100%
         }
 
         #status {
-            margin: .5rem 0 1rem;
-            color: var(--nord13);
-            font-size: 1.3rem
+            margin: .1rem 0 1rem;
+            color: var(--black);
+            font-size: 10rem
         }
     </style>
 </head>
 
 <body>
     <main>
-        <h1>簡易點名系統</h1>
-        <h2 id="status">歡迎使用</h2>
+        <h1>賽馬會「與耆同絡」長者平板電腦及線上支援計劃</h1>
+        <h2 id="status">點名系統</h2>
         <nav>
             <button onclick="searchA()">查詢紀錄</button><button onclick="callA()">點名</button><button
-                onclick="addA()">新增學生</button>
+                onclick="addA()">新增參加者</button>
         </nav>
         <section>
             <div id="history">
@@ -251,13 +257,20 @@
                 </table>
             </div>
             <div id="call">
+                
                 <h2>載入中</h2>
             </div>
             <div id="add">
                 <div class="search"><input type="text"><button>新增</button></div>
             </div>
         </section>
-       
+       <footer> 
+           <align="center"> <table> <tr>
+           <td>  <img src="中心Logo.png" width="200" boarder=0 /> </td>
+           <td>  <img src=" 下載.png" width="200"  boarder=0 /> </td> 
+       </tr> </table>
+       </footer>
+        
     </main>
     <script>
         //部屬連結放這裡
